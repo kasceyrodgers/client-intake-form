@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,35 +68,33 @@
 </head>
 <body>
   <h1>Website Client Intake Form</h1>
-  <form action="https://formspree.io/f/mzzvewvv" method="POST">
+  <form action="https://formspree.io/f/mzzvewvv" method="POST" enctype="multipart/form-data">
     <section>
       <h2>1. Basic Info</h2>
       <label>Full Name</label><input type="text" name="full_name" required>
       <label>Business Name</label><input type="text" name="business_name">
       <label>Business Email</label><input type="email" name="business_email" required>
-      <label>Phone Number</label><input type="tel" name="phone">
-      <label>Preferred Domain Name</label><input type="text" name="domain_name">
+      <label>Phone Number</label><input type="tel" name="phone" required>
+      <label>Preferred Domain Name</label><input type="text" name="domain_name" required>
       <label>Do you already have a domain & hosting?</label>
-    <select name="hosting_info">
-      <option value="">Select</option>
-      <option value="Yes">Yes</option>
-      <option value="No">No</option>
-    </select>
+      <select name="hosting_info" required>
+        <option value="">Select</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
     </section>
 
     <section>
       <h2>2. Purpose & Goals</h2>
-      <label>Primary goal of the website</label><textarea name="website_goal" rows="3"></textarea>
-      <label>What action should visitors take?</label><textarea name="visitor_action" rows="2"></textarea>
+      <label>Primary goal of the website</label><textarea name="website_goal" rows="3" required></textarea>
+      <label>What action should visitors take?</label><textarea name="visitor_action" rows="2" required></textarea>
     </section>
 
     <section>
       <h2>3. Style & Branding</h2>
-      <label>Logo Upload</label>
-    <input type="file" name="logo_upload" accept="image/*">
-    <label>Logo Description (optional)</label>
-    <input type="text" name="logo_info">
-      <label>Brand colors or style guide</label><input type="text" name="brand_colors">
+      <label>Logo Upload</label><input type="file" name="logo_upload" accept="image/*">
+      <label>Logo Description (optional)</label><input type="text" name="logo_info">
+      <label>Brand colors or style guide</label><input type="text" name="brand_colors" required>
       <label>Preferred fonts</label><input type="text" name="fonts">
       <label>Websites you like (list)</label><textarea name="liked_websites" rows="3"></textarea>
       <label>Tone of voice</label><input type="text" name="tone_of_voice">
@@ -119,29 +118,29 @@
     <section>
       <h2>5. Content & Assets</h2>
       <label>Written content available?</label>
-    <select name="written_content">
-      <option value="">Select</option>
-      <option value="Yes">Yes</option>
-      <option value="No">No</option>
-    </select>
+      <select name="written_content">
+        <option value="">Select</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
       <label>High-quality images/graphics?</label>
-    <select name="images">
-      <option value="">Select</option>
-      <option value="Yes">Yes</option>
-      <option value="No">No</option>
-    </select>
+      <select name="images">
+        <option value="">Select</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
       <label>Videos?</label>
-    <select name="videos">
-      <option value="">Select</option>
-      <option value="Yes">Yes</option>
-      <option value="No">No</option>
-    </select>
+      <select name="videos">
+        <option value="">Select</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
       <label>Team photos/bios?</label>
-    <select name="team_photos">
-      <option value="">Select</option>
-      <option value="Yes">Yes</option>
-      <option value="No">No</option>
-    </select>
+      <select name="team_photos">
+        <option value="">Select</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
       <label>Social media links</label><textarea name="social_links" rows="2"></textarea>
     </section>
 
@@ -163,25 +162,25 @@
 
     <section>
       <h2>7. Budget & Timeline</h2>
-      <label>Ideal Launch Date</label><input type="date" name="launch_date">
-      <label>Budget Range</label><input type="text" name="budget">
-      <label>Hard Deadlines</label><input type="text" name="deadlines">
+      <label>Ideal Launch Date</label><input type="date" name="launch_date" required>
+      <label>Budget Range</label><input type="text" name="budget" required>
+      <label>Hard Deadlines</label><input type="text" name="deadlines" required>
     </section>
 
     <section>
       <h2>8. Ongoing Needs</h2>
       <label>Need ongoing support?</label>
-    <select name="ongoing_support">
-      <option value="">Select</option>
-      <option value="Yes">Yes</option>
-      <option value="No">No</option>
-    </select>
+      <select name="ongoing_support">
+        <option value="">Select</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
       <label>Need training to update the site?</label>
-    <select name="training_needs">
-      <option value="">Select</option>
-      <option value="Yes">Yes</option>
-      <option value="No">No</option>
-    </select>
+      <select name="training_needs">
+        <option value="">Select</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
     </section>
 
     <button type="submit">Submit</button>
