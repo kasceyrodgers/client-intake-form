@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Client Intake Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: linear-gradient(to right, #e0f0ff, #f0f7ff);
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #1e4e79;
+    }
+    form {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    label {
+      display: block;
+      margin: 0.5rem 0 0.2rem;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+    .checkbox-group {
+      margin-bottom: 1rem;
+    }
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      font-weight: normal;
+    }
+    .checkbox-group input {
+      width: auto;
+      margin-right: 0.5rem;
+    }
+    button {
+      background-color: #1e4e79;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover {
+      background-color: #163d5c;
+    }
+  </style>
+</head>
+<body>
+  <h1>Website Client Intake Form</h1>
+  <form action="https://formspree.io/f/yourFormID" method="POST">
+    <section>
+      <h2>1. Basic Info</h2>
+      <label>Full Name</label><input type="text" name="full_name" required>
+      <label>Business Name</label><input type="text" name="business_name">
+      <label>Business Email</label><input type="email" name="business_email" required>
+      <label>Phone Number</label><input type="tel" name="phone">
+      <label>Preferred Domain Name</label><input type="text" name="domain_name">
+      <label>Do you already have a domain & hosting?</label>
+    <select name="hosting_info">
+      <option value="">Select</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+    </section>
+
+    <section>
+      <h2>2. Purpose & Goals</h2>
+      <label>Primary goal of the website</label><textarea name="website_goal" rows="3"></textarea>
+      <label>What action should visitors take?</label><textarea name="visitor_action" rows="2"></textarea>
+    </section>
+
+    <section>
+      <h2>3. Style & Branding</h2>
+      <label>Logo Upload</label>
+    <input type="file" name="logo_upload" accept="image/*">
+    <label>Logo Description (optional)</label>
+    <input type="text" name="logo_info">
+      <label>Brand colors or style guide</label><input type="text" name="brand_colors">
+      <label>Preferred fonts</label><input type="text" name="fonts">
+      <label>Websites you like (list)</label><textarea name="liked_websites" rows="3"></textarea>
+      <label>Tone of voice</label><input type="text" name="tone_of_voice">
+    </section>
+
+    <section>
+      <h2>4. Pages/Content Needed</h2>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="pages[]" value="Home"> Home</label>
+        <label><input type="checkbox" name="pages[]" value="About"> About</label>
+        <label><input type="checkbox" name="pages[]" value="Services"> Services / Products</label>
+        <label><input type="checkbox" name="pages[]" value="Portfolio"> Portfolio / Gallery</label>
+        <label><input type="checkbox" name="pages[]" value="Blog"> Blog / News</label>
+        <label><input type="checkbox" name="pages[]" value="Testimonials"> Testimonials</label>
+        <label><input type="checkbox" name="pages[]" value="Contact"> Contact Page</label>
+        <label><input type="checkbox" name="pages[]" value="FAQ"> FAQ</label>
+        <label><input type="text" name="pages_other" placeholder="Other..."></label>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. Content & Assets</h2>
+      <label>Written content available?</label>
+    <select name="written_content">
+      <option value="">Select</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+      <label>High-quality images/graphics?</label>
+    <select name="images">
+      <option value="">Select</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+      <label>Videos?</label>
+    <select name="videos">
+      <option value="">Select</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+      <label>Team photos/bios?</label>
+    <select name="team_photos">
+      <option value="">Select</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+      <label>Social media links</label><textarea name="social_links" rows="2"></textarea>
+    </section>
+
+    <section>
+      <h2>6. Functionality Needed</h2>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="functions[]" value="Contact Form"> Contact Form</label>
+        <label><input type="checkbox" name="functions[]" value="eCommerce"> Online Store</label>
+        <label><input type="checkbox" name="functions[]" value="Booking"> Appointment Booking</label>
+        <label><input type="checkbox" name="functions[]" value="Blog"> Blog</label>
+        <label><input type="checkbox" name="functions[]" value="Newsletter"> Email Signup</label>
+        <label><input type="checkbox" name="functions[]" value="Live Chat"> Live Chat</label>
+        <label><input type="checkbox" name="functions[]" value="SEO"> SEO Optimization</label>
+        <label><input type="checkbox" name="functions[]" value="Analytics"> Analytics Setup</label>
+        <label><input type="checkbox" name="functions[]" value="Accessibility"> Accessibility Features</label>
+        <label><input type="text" name="functions_other" placeholder="Other..."></label>
+      </div>
+    </section>
+
+    <section>
+      <h2>7. Budget & Timeline</h2>
+      <label>Ideal Launch Date</label><input type="date" name="launch_date">
+      <label>Budget Range</label><input type="text" name="budget">
+      <label>Hard Deadlines</label><input type="text" name="deadlines">
+    </section>
+
+    <section>
+      <h2>8. Ongoing Needs</h2>
+      <label>Need ongoing support?</label>
+    <select name="ongoing_support">
+      <option value="">Select</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+      <label>Need training to update the site?</label>
+    <select name="training_needs">
+      <option value="">Select</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+    </section>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
